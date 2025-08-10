@@ -106,7 +106,11 @@ const destinationMap = {
     'ניו יורק': 'New York',
     'לוס אנג\'לס': 'Los Angeles',
     'מיאמי': 'Miami',
-    'טורונטו': 'Toronto'
+    'טורונטו': 'Toronto',
+    'קלמטה': 'Calmeta',
+    'מיקונוס': 'Mykonos',
+    'זנזיבר': 'Zanzibar',
+    'קורפו': 'Corfu'
 };
 
 // Store monitoring data
