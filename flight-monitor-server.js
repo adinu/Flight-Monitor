@@ -60,6 +60,7 @@ async function sendSMSAlert(changes, destinations) {
     return { success: true, sid: result.sid };
     
   } catch (error) {
+    console.log("error",error);
     console.error('❌ SMS sending failed:', error.message);
     return { success: false, error: error.message };
   }
