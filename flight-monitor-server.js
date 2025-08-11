@@ -133,7 +133,7 @@ const destinationMap = {
     'לימסול': 'Limassol',
     'זאדאר': 'Zadar',
     'טרוגיר': 'Trogir',
-    'ספליט': 'Split',
+    'ספליט': 'Split'
 };
 
 // Store monitoring data
