@@ -19,6 +19,9 @@ const ALERT_PHONE_NUMBER = process.env.ALERT_PHONE_NUMBER;
 let twilioClient = null;
 
 // Initialize Twilio if credentials are provided
+console.log("twilioClient",twilioClient);
+console.log("TWILIO_PHONE_NUMBER",TWILIO_PHONE_NUMBER);
+console.log("ALERT_PHONE_NUMBER", ALERT_PHONE_NUMBER);
 if (TWILIO_ACCOUNT_SID && TWILIO_AUTH_TOKEN) {
   try {
     twilioClient = twilio(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN);
