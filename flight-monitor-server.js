@@ -471,6 +471,7 @@ app.get('/api/health', (req, res) => {
 
 // Test SMS endpoint
 app.post('/api/sms/test', async (req, res) => {
+  console.log('starting');
   const { phoneNumber, message } = req.body;
   
   if (!twilioClient) {
@@ -481,7 +482,10 @@ app.post('/api/sms/test', async (req, res) => {
 
   const testPhone = phoneNumber || ALERT_PHONE_NUMBER;
   const testMessage = message || `🧪 Test SMS from Flight Monitor\n${new Date().toLocaleString()}\n\nSMS alerts are working correctly!`;
-
+  console.log('testPhone', testPhone);
+  console.log("testMessage",testMessage);
+  console.log("TWILIO_PHONE_NUMBER",TWILIO_PHONE_NUMBER);
+  console.log("twilioClient", twilioClient);
   try {
     const result = await twilioClient.messages.create({
       body: testMessage,
