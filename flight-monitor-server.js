@@ -37,13 +37,16 @@ app.use(express.static('public'));
 
 // SMS notification function
 async function sendSMSAlert(changes, destinations) {
+  console.log('⚠️  sendSMSAlert');
   if (!twilioClient || !TWILIO_PHONE_NUMBER || !ALERT_PHONE_NUMBER) {
     console.log('⚠️  SMS not sent - missing configuration');
     return false;
   }
 
   try {
+    console.log('⚠️  before message');
     const message = formatSMSMessage(changes, destinations);
+    console.log('message', message);
     console.log("twilioClient",twilioClient);
     console.log("TWILIO_PHONE_NUMBER",TWILIO_PHONE_NUMBER);
     console.log("ALERT_PHONE_NUMBER", ALERT_PHONE_NUMBER);
