@@ -78,12 +78,12 @@ function formatSMSMessage(changes, destinations) {
   });
   
   message += `\nCURRENT DESTINATIONS (${destinations.length}):\n`;
-  destinations.slice(0, 5).forEach(dest => {
+  destinations.slice(0, 40).forEach(dest => {
     message += `✈️ ${dest.englishName} - ${dest.price}\n`;
   });
   
-  if (destinations.length > 5) {
-    message += `... and ${destinations.length - 5} more\n`;
+  if (destinations.length > 40) {
+    message += `... and ${destinations.length - 40} more\n`;
   }
   
   message += `\nView details: https://www.tustus.co.il/Arkia/Home`;
